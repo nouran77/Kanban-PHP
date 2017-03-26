@@ -9,6 +9,8 @@ $description = $_POST['description'];
 $result = mysqli_query($connection, "INSERT INTO tasks(status, start_time, finish_time, task_name, description)
 VALUES ('TODO','$start_time', '$finish_time', '$task_name' ,'$description')");
 
+$message = "Your Task is Inserted Successfully";
+echo "<script type='text/javascript'>alert('$message');</script>";
 
 
 ?>

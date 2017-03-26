@@ -18,8 +18,11 @@ session_start();
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/style2.css">
     <link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+
 </head>
 
 <body>
@@ -39,7 +42,7 @@ session_start();
             <input class="form-control" type="time" placeholder="finish Time" name="finish_time" id="finish_time">
           </div>
           <div class="col-xs-2">
-            <input class="form-control"type="text" placeholder="description" name="description" id="description">
+            <input class="form-control"type="text" placeholder="Description" name="description" id="description">
           </div>
             <button class="btn btn-primary" type="submit" name="submit" class="btn-primary"> Add Task </button>
 
@@ -149,11 +152,7 @@ session_start();
     <script type="text/javascript" src="js/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-     <!-- <script>
-    $(function(){
-    $('.datepicker').datepicker();
-    });
-    </script> -->
+
     <script type="text/javascript">
 
     $(function(){
@@ -164,7 +163,9 @@ session_start();
             type: "POST",
             data: $(this).serialize(),
             success: function(response){
+          
               location.reload();
+
             },
             error: function(){
               console.log('Error');

@@ -46,8 +46,7 @@ else if(isset($_POST['register_btn']))
 <html>
 <head>
   <title>Login</title>
-  <!--<link rel="stylesheet" type="text/css" href="style.css"/>-->
-  <?php include 'css/css.html'; ?>
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
 </head>
 <body>
 <div class="header">
@@ -59,90 +58,74 @@ else if(isset($_POST['register_btn']))
          unset($_SESSION['message']);
     }
 ?>
-<!--<form method="post" action="login.php">
-  <table>
-     <tr>
-           <td>Username : </td>
-           <td><input type="text" name="username" class="textInput"></td>
-     </tr>
-      <tr>
-           <td>Password : </td>
-           <td><input type="password" name="password" class="textInput"></td>
-     </tr>
-      <tr>
-           <td></td>
-           <td><input type="submit" name="login_btn" class="Log In"></td>
-     </tr>
 
-</table>
-</form>-->
 <div class="form">
-      
+
       <ul class="tab-group">
         <li class="tab"><a href="#signup">Sign Up</a></li>
         <li class="tab active"><a href="#login">Log In</a></li>
       </ul>
-      
+
       <div class="tab-content">
 
-         <div id="login">   
-          <h1>Welcome Nouran!</h1>
-          
+         <div id="login">
+          <h1>Welcome !</h1>
+
           <form action="login.php" method="post">
-          
+
             <div class="field-wrap">
-            
+
             <input type="text" required autocomplete="off" name="username" placeholder="Username"/>
           </div>
-          
+
           <div class="field-wrap">
-            
+
             <input type="password" required autocomplete="off" name="password" placeholder="Password"/>
           </div>
-         
+
           <button class="button button-block" name="login_btn" type="submit" >Login</button>
-          
+
           </form>
 
         </div>
-        
-        
-        <div id="signup">   
+
+
+        <div id="signup">
           <h1>Sign Up for Free</h1>
-          
+
           <form action="register.php" method="post" autocomplete="off">
-          
+
           <div class="top-row">
             <div class="field-wrap">
-              
+
               <input type="text" required autocomplete="off" name="username" placeholder="username"/>
             </div>
-        
+
             <div class="field-wrap">
-              
+
               <input type="email" required autocomplete="off" name="email" placeholder="email" />
             </div>
           </div>
 		  <div class="top-row">
               <div class="field-wrap">
-                
+
                 <input type="password"required autocomplete="off" name='password' placeholder="Password" />
               </div>
               <div class="field-wrap">
-                
+
                 <input type="password"required autocomplete="off" name="password2" placeholder="Confirm Password"/>
               </div>
 
           </div>
-          
+
           <button type="submit" class="button button-block" name="register_btn" />Register</button>
-          
+
           </form>
 
         </div>
       </div>
   </div>
-        
+
 
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
